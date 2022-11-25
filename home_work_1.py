@@ -11,11 +11,19 @@
 # **\t    **  **    **        **     **    ** **\n**\t     ****    **          **    **     ****""", end="")
 
 # Task-5
-# print(r'''Escape sequences
-# \a      Bell (alert)
-# \b      Backspace
-# \n      New line
-# \t      Horizontal tab
-# \\      Backslash \
-# \"      Double quotation mark "
-# \'      Single quotation mark ' ''')
+# print(r'''        Escape sequences:
+# --------------------------------|
+# \a      Bell (alert)            |
+# --------------------------------|
+# \b      Backspace               |
+# --------------------------------|
+# \n      New line                |
+# --------------------------------|
+# \t      Horizontal tab          |
+# --------------------------------|
+# \\      Backslash \             |
+# --------------------------------|
+# \"      Double quotation mark " |
+# --------------------------------|
+# \'      Single quotation mark ' |
+# --------------------------------|''')
