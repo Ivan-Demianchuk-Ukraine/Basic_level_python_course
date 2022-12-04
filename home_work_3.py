@@ -36,11 +36,17 @@
 
 # 3. Определить является ли введенное с клавиатуры число простым
 # (делится без остатка только на себя и единицу)
-# enter = int(input('Enter your number'))
-# if enter / 1 == enter and enter % 2 == True and enter != 1 and enter != -1:
-#     print('YES! This is prime number.')
-# else:
-#     print('NO! This is not prime number')
+enter = int(input('Enter your number: '))
+if enter / 1 == enter and enter % 2 == True and enter != 1 and enter != -1 and enter % 3 != 0 and enter % 5 != 0 and enter % 7 != 0 and enter % 9 != 0:
+    print('YES! This is prime number.')
+elif enter == 3 or enter == 7 or enter == 5:
+    print('YES! This is prime number.')
+elif enter == 9:
+    print('No! This is not prime number')
+elif enter == 1 or enter == -1:
+    print('Wrong number')
+else:
+    print('NO! This is not prime number')
 
 
 # *(НЕОБЯЗАТЕЛНО! НА ОЦЕНКУ НЕ ВЛИЯЕТ)
