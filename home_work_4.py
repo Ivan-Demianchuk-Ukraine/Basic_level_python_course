@@ -17,16 +17,16 @@ print(result_string)
 
 # При помощи вложенных циклов (можно while, можно for) нарисовать следующие фигуры
 # представленные ниже. Пользователь вводит, с клавиатуры, высоту фигуры в символах.
-users_heigh = int(input('Enter the high: '))
+high = int(input('Enter the high: '))
 space = ' '
-print(space*users_heigh,'*')
-count = users_heigh
+print(space * high, '*')
+count = high
 spaces_between_stars = 3
-for i in range(users_heigh-2):
+for i in range(high - 2):
     count -= 1
-    print(space*(count),'*',space*(spaces_between_stars),'*', sep='')
-    spaces_between_stars +=2
-print('* '*int((spaces_between_stars/2) + 3), sep='')
+    print(space * count, '*', space * spaces_between_stars, '*', sep='')
+    spaces_between_stars += 2
+print('* ' * int((spaces_between_stars/2) + 3), sep='')
 # A
 #             *
 #           *   *
@@ -37,15 +37,15 @@ print('* '*int((spaces_between_stars/2) + 3), sep='')
 # * * * * * * * * * * * * *
 
 
-users_heigh = int(input('Enter the high: '))
+high = int(input('Enter the high: '))
 space = ' '
-print(space*users_heigh,'*')
-count = users_heigh
+print(space * high, '*')
+count = high
 spaces_between_stars = 3
-for i in range(users_heigh-2):
+for i in range(high - 2):
     count -= 1
-    print(space*(count),'* ','* '*(int(spaces_between_stars/2)),'*', sep='')
-    spaces_between_stars +=2
+    print(space * count, '* ', '* ' * (int(spaces_between_stars/2)), '*', sep='')
+    spaces_between_stars += 2
 print('* '*int((spaces_between_stars/2) + 3), sep='')
 
 # B
@@ -58,22 +58,22 @@ print('* '*int((spaces_between_stars/2) + 3), sep='')
 # * * * * * * * * * * * * *
 
 
-users_heigh = int(input('Enter the high: '))
+high = int(input('Enter the high: '))
 space = ' '
-print(space*users_heigh,'*')
-count = users_heigh
+print(space * high, '*')
+count = high
 spaces_between_stars = 3
-for i in range(users_heigh-2):
+for i in range(high - 2):
     count -= 1
-    print(space*(count),'* ','* '*(int(spaces_between_stars/2)),'*', sep='')
-    spaces_between_stars +=2
-print('* '*int((spaces_between_stars/2) + 3), sep='')
+    print(space*count, '* ', '* '*(int(spaces_between_stars/2)), '*', sep='')
+    spaces_between_stars += 2
+print('* ' * int((spaces_between_stars/2) + 3), sep='')
 count = 0
-for i in range(users_heigh-2):
+for i in range(high - 2):
     count += 1
-    print(space*(count),'*',space*(spaces_between_stars),'*', sep='')
-    spaces_between_stars -=2
-print(space*users_heigh,'*')
+    print(space * count, '*', space * spaces_between_stars, '*', sep='')
+    spaces_between_stars -= 2
+print(space * high, '*')
 # C
 #             *
 #           * * *
@@ -90,28 +90,28 @@ print(space*users_heigh,'*')
 #             *
 
 
-users_heigh = int(input('Enter the high: '))
+high = int(input('Enter the high: '))
 space = ' '
-print(space*users_heigh,'*')
-count = users_heigh
+print(space * high, '*')
+count = high
 spaces_between_stars = 3
-for i in range(users_heigh-2):
+for i in range(high - 2):
     count -= 1
-    print(space*(count),'* ','* '*(int(spaces_between_stars/2)),'*', sep='')
-    spaces_between_stars +=2
-print('* '*int((spaces_between_stars/2) + 3), sep='')
+    print(space * count, '* ', '* '*(int(spaces_between_stars/2)), '*', sep='')
+    spaces_between_stars += 2
+print('* ' * int((spaces_between_stars/2) + 3), sep='')
 count = 0
-for i in range(users_heigh-2):
+for i in range(high - 2):
     if spaces_between_stars % 2 != 0:
-        bount_new = spaces_between_stars // 2
+        half_spaces_between_stars = spaces_between_stars // 2
         count += 1
-        print(space * (count), '*', space * (bount_new), '*', space * (bount_new), '*', sep='')
+        print(space * count, '*', space * half_spaces_between_stars, '*', space*half_spaces_between_stars, '*', sep='')
         spaces_between_stars -= 2
     else:
         count += 1
-        print(space*(count),'*',space*(spaces_between_stars),'*', sep='')
-        spaces_between_stars -=2
-print(space*users_heigh,'*')
+        print(space * count, '*', space * spaces_between_stars, '*', sep='')
+        spaces_between_stars -= 2
+print(space * high, '*')
 
 # D
 #             *
@@ -128,5 +128,3 @@ print(space*users_heigh,'*')
 #           * * *
 #             *
 # *
-
-
