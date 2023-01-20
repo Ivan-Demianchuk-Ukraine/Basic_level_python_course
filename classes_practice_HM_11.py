@@ -12,17 +12,26 @@ class Employee:
         self.coding_lang = coding_lang
 
     def __str__(self):
+        """
+          Returns the string representation of the employee, in the format:
+          'firstname lastname'
+          """
         return f'{self.firstname} {self.lastname}'
 
     def write_in_json(self):
+        """
+        Writes the employee's information to a json file 'employee_info'
+        """
         with open(f'employee info', 'w') as file:
             json_string = json.dumps(self.__dict__)
             file.writelines(json_string)
 
-    def birth_year(self):
-        return
-
     def rename(self, new_name: str, new_lastname: str):
+        """
+        Changes the first name and last name of the employee to the given new name and new last name.
+        Writes the updated information to a json file 'employee_info'
+        Returns a string 'FirstName and LastName were changed.'
+        """
         self.firstname = new_name
         self.lastname = new_lastname
         with open(f'employee info', 'a') as file:
@@ -38,6 +47,10 @@ class Employer:
         self.employees = employees
 
     def get_info(self):
+        """
+        Returns a string containing the employer's name, address and employees, in the format:
+        'name,address, employees'
+        """
         return f'{self.name},{self.address}, {self.employees}'
 
     def change_address(self, new_address: str) -> str:
