@@ -56,7 +56,7 @@ class WithFile:
 
     def add_file_or_folder(self, string: str) -> dict:
         """
-        Adds file or folder to the corresponding list.
+        Adds file or folder to the corresponding list. And creates this file/folder in the current directory.
         :param: receiving any string value. If it will be file name, then there must be dot in the name.
          If folder then without dot.
         :return:
@@ -64,15 +64,19 @@ class WithFile:
         if '.' in string:
             self.files.append(string)
             self.dict['filenames'] = self.files
+            with open(string, 'w'):
+                pass
             return self.dict
         else:
             self.folders.append(string)
             self.dict['dirnames'] = self.folders
+            with open(string, 'w'):
+                pass
             return self.dict
 
 
 instance = WithFile('test_directory')
-print(instance.create_dict())
+print('your created dict: ', instance.create_dict())
 print(instance.add_file_or_folder('json.txt'))
 print(instance.add_file_or_folder('folder2'))
 print(instance.order_dict(False))
