@@ -9,21 +9,10 @@
 # **\t**          **    ****         ****     **\n**\t **        **    **  **        ** **    **
 # **\t  **      **    **    **       **  **   **\n**\t   **    **    **********      **   **  **
 # **\t    **  **    **        **     **    ** **\n**\t     ****    **          **    **     ****""", end="")
-
 # Task-5
-# print(r'''        Escape sequences:
-# --------------------------------|
-# \a      Bell (alert)            |
-# --------------------------------|
-# \b      Backspace               |
-# --------------------------------|
-# \n      New line                |
-# --------------------------------|
-# \t      Horizontal tab          |
-# --------------------------------|
-# \\      Backslash \             |
-# --------------------------------|
-# \"      Double quotation mark " |
-# --------------------------------|
-# \'      Single quotation mark ' |
-# --------------------------------|''')
+a = '-'*31+'|'
+print(f"\t\tEscape sequences:\n {a} \n \\a\tBell (alert)\t\t\t\t|\n {a} \n \\b\tBackspace\t\t\t\t\t|\n {a} \n"
+      f" \\n\tNew line\t\t\t\t\t|\n {a} \n \\t\tHorizontal tab\t\t\t\t|\n {a} \n \\\tBackslash\t\t\t\t\t|\n "
+      f"{a} \n" + f'\\"\tDouble quotation mark\t\t|\n {a} \n' + f"\\'\tSingle quotation mark\t\t|\n {a} \n")
+
+print('sa')
