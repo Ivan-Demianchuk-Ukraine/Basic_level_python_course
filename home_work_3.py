@@ -3,8 +3,7 @@
 # first_number = int(input('Enter your first number '))
 # operator = str(input('Enter operator: '))
 # second_number = int(input('Enter your second number '))
-#
-#
+
 # if operator == '+':
 #     print(first_number + second_number)
 #
@@ -36,17 +35,27 @@
 
 # 3. Определить является ли введенное с клавиатуры число простым
 # (делится без остатка только на себя и единицу)
+
 enter = int(input('Enter your number: '))
-if enter / 1 == enter and enter % 2 == True and enter != 1 and enter != -1 and enter % 3 != 0 and enter % 5 != 0 and enter % 7 != 0 and enter % 9 != 0:
-    print('YES! This is prime number.')
-elif enter == 3 or enter == 7 or enter == 5:
-    print('YES! This is prime number.')
-elif enter == 9:
-    print('No! This is not prime number')
-elif enter == 1 or enter == -1:
-    print('Wrong number')
-else:
-    print('NO! This is not prime number')
+prime_number = []
+for i in range(2, enter+1, 1):
+    if enter % i == 0:
+        prime_number.append(i)
+
+if prime_number[0] == enter and len(prime_number) == 1:
+    print(f'this is prime number:', prime_number[0])
+
+
+# if enter / 1 == enter and enter % 2 == True and enter != 1 and enter != -1 and enter % 3 != 0 and enter % 5 != 0 and enter % 7 != 0 and enter % 9 != 0:
+#     print('YES! This is prime number.')
+# elif enter == 3 or enter == 7 or enter == 5:
+#     print('YES! This is prime number.')
+# elif enter == 9:
+#     print('No! This is not prime number')
+# elif enter == 1 or enter == -1:
+#     print('Wrong number')
+# else:
+#     print('NO! This is not prime number')
 
 
 # *(НЕОБЯЗАТЕЛНО! НА ОЦЕНКУ НЕ ВЛИЯЕТ)
@@ -54,4 +63,3 @@ else:
 #  "Маша нашла в лесу {К} гриб...". K пользователь вводит с клавиатуры.
 # Например: Маша нашла в лесу 7 грибОВ.
 # Маша нашла в лесу 32 грибА.
-
