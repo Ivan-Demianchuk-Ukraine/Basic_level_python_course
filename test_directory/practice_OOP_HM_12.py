@@ -21,13 +21,13 @@ class WithFile:
         return: string representation of the files and folders in the directory
         """
         path_to = os.getcwd()
-        list_of_files_or_folders = os.listdir(r'C:\Users\PREDATOR\PycharmProjects\basic_python_course\test_directory')
+        list_of_files_or_folders = os.listdir()
         for i in list_of_files_or_folders:
             if os.path.isfile(path_to + f'\\{i}'):
                 self.files.append(i)
             else:
                 self.folders.append(i)
-        self.dict = {'filenames': self.files, 'dirnames': self.folders}
+        self.dict = {'filenames': self.files, 'dir-names': self.folders}
         return f'files: {self.files} and folders: {self.folders}'
 
     def order_dict(self, bool_value: bool):
@@ -39,30 +39,30 @@ class WithFile:
         """
         if bool_value:
             self.dict['filenames'] = sorted(self.dict['filenames'])
-            self.dict['dirnames'] = sorted(self.dict['dirnames'])
+            self.dict['dir-names'] = sorted(self.dict['dir-names'])
             return self.dict
         elif not bool_value:
             self.dict['filenames'] = sorted(self.dict['filenames'], reverse=True)
-            self.dict['dirnames'] = sorted(self.dict['dirnames'], reverse=True)
+            self.dict['dir-names'] = sorted(self.dict['dir-names'], reverse=True)
             return self.dict
 
-    def add_file_or_folder(self, string: str) -> dict:
+    def add_file_or_folder(self, file_or_folder_name: str) -> dict:
         """
         Adds file or folder to the corresponding list. And creates this file/folder in the current directory.
         :param: receiving any string value. If it will be file name, then there must be dot in the name.
          If folder then without dot.
         :return:
         """
-        if '.' in string:
-            self.files.append(string)
+        if '.' in file_or_folder_name:
+            self.files.append(file_or_folder_name)
             self.dict['filenames'] = self.files
-            with open(string, 'w'):
+            with open(file_or_folder_name, 'w'):
                 pass
             return self.dict
         else:
-            self.folders.append(string)
-            self.dict['dirnames'] = self.folders
-            with open(string, 'w'):
+            self.folders.append(file_or_folder_name)
+            self.dict['dir-names'] = self.folders
+            with open(file_or_folder_name, 'w'):
                 pass
             return self.dict
 
